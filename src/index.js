@@ -1,6 +1,9 @@
 // 1. Import dotenv to load environment variables
 import dotenv from "dotenv";
 
+// ✅ Import your Express app
+import { app } from "./app.js";
+
 // 2. Import the DB connection function from db/index.js
 import connectDB from "./db/index.js";
 

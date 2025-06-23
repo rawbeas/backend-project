@@ -15,4 +15,10 @@ app.use(express.static("public")); // Serve static files from the 'public' direc
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(cookieParser());
 
+//routes import
+import userRouter from "./routes/user.routes.js";
+
+//Route creation
+app.use("/api/v1/users", userRouter);
+
 export { app };
