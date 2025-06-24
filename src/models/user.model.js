@@ -51,6 +51,7 @@ const userSchema = new Schema(
   }
 );
 
+// Middleware to hash password before saving user
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
 
